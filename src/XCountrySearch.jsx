@@ -24,7 +24,7 @@ const CountryCards = ({ name, flagImg, flagAlt }) => {
 };
 
 export default function Countries() {
-  const API = "https://restcountries.com/v3.1/all";
+  const API = "https://xcountries-backend.azurewebsites.net/all";
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
@@ -55,7 +55,7 @@ export default function Countries() {
   };
 
   const filteredCountries = countries.filter((country) =>
-    country.name.common.toLowerCase().includes(searchTerm)
+    country.name.toLowerCase().includes(searchTerm)
   );
 
   if (loading) {
@@ -102,9 +102,9 @@ export default function Countries() {
         {filteredCountries.map((country) => (
           <CountryCards
             key={country.cca3}
-            name={country.name.common}
-            flagImg={country.flags.png}
-            flagAlt={country.flags.alt || `Flag of ${country.name.common}`}
+            name={country.name}
+            flagImg={country.flag}
+            flagAlt={country.alt || `Flag of ${country.name}`}
           />
         ))}
       </div>
