@@ -72,17 +72,17 @@ export default function Countries() {
 
   return (
     <div>
-      <div className="search-container"> 
+      <div className="search-container">
         <input
           type="text"
           value={searchTerm}
           onChange={handleSearchChange}
           placeholder="Search for Countries ..."
-          className="search-bar" 
+          className="search-bar"
           style={{
             padding: "10px",
             fontSize: "14px",
-            width: "50%", 
+            width: "50%",
             margin: "10px"
           }}
         />
