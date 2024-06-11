@@ -88,7 +88,7 @@ export default function Countries() {
         />
       </div>
       {filteredCountries.length === 0 && searchTerm && (
-        <p style={{ margin: "10px" }}></p>
+        <p style={{ margin: "10px" }}>No matching countries found.</p>
       )}
       <div
         style={{
